@@ -23,11 +23,14 @@ xcodebuild build -project ProjectTemplate.xcodeproj \
                 -sdk iphoneos15.0 \
                 -derivedDataPath ./build \
                 -allowProvisioningUpdates \
-                -allowProvisioningDeviceRegistration
-
+                -allowProvisioningDeviceRegistration \
+                -arch arm64e \
+                # -configuration Release
+                # CODE_SIGN_IDENTITY=Apple Distribution: Shanghai Yitan Network Technology Company Limited (RPHGJA2XNE)
+                # IPHONEOS_DEPLOYMENT_TARGET=10.0
 # -allowProvisioningUpdates
-# 允许xcodebuild与Apple Developer网站进行通信。 
-# 对于自动签名的目标，xcodebuild将创建并更新配置文件，应用程序ID和证书。 
+# 允许xcodebuild与Apple Developer网站进行通信。
+# 对于自动签名的目标，xcodebuild将创建并更新配置文件，应用程序ID和证书。
 # 对于手动签名的目标，xcodebuild将下载缺失或更新的供应配置文件， 需要在Xcode的帐户首选项窗格中添加开发者帐户。
 
 # -allowProvisioningDeviceRegistration
