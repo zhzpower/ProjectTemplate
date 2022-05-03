@@ -20,7 +20,7 @@ echo `pwd`
 xcodebuild clean
 xcodebuild build -project ProjectTemplate.xcodeproj \
                 -scheme ProjectTemplate \
-                -sdk iphoneos15.2 \
+                -sdk iphoneos15.4 \
                 -derivedDataPath ./build \
                 -allowProvisioningUpdates \
                 -allowProvisioningDeviceRegistration \
