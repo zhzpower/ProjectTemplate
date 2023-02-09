@@ -17,6 +17,7 @@ echo `which xcodebuild`
 cd ./ProjectTemplate/
 echo `pwd`
 
+#sdk: xcodebuild -version -sdk
 xcodebuild clean
 xcodebuild build -project ProjectTemplate.xcodeproj \
                 -scheme ProjectTemplate \
