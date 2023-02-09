@@ -18,10 +18,11 @@ cd ./ProjectTemplate/
 echo `pwd`
 
 #sdk: xcodebuild -version -sdk
+sdk=`xcodebuild -version -sdk | grep "iphoneos.*" | awk -F'[(,)]'  '{print $2}'`
 xcodebuild clean
 xcodebuild build -project ProjectTemplate.xcodeproj \
                 -scheme ProjectTemplate \
-                -sdk iphoneos16.2 \
+                -sdk $sdk \
                 -derivedDataPath ./build \
                 -allowProvisioningUpdates \
                 -allowProvisioningDeviceRegistration \
